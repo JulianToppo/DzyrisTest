@@ -3,7 +3,7 @@ const app= express();
 const cors= require('cors')
 const mongoose = require("mongoose");
 
-const userDB= require('./model/userModel')
+const User= require('./model/userModel')
 
 
 const port=3000;
@@ -34,7 +34,7 @@ app.post('/sendData',(req,res)=>{
         const result = await user.save();
         res.status(201).json({"message":result});
       } catch (error) {
-        res.status(500).json({"error":`Error creating user: + ${error.message}`);
+        res.status(500).json({"error":`Error creating user: + ${error.message}`});
       }
 
 
