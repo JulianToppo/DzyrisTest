@@ -19,7 +19,7 @@ app.get('/',(req,res)=>{
     res.send('Hello from server');
 })
 
-app.post('/sendData',(req,res)=>{
+app.post('/sendData', async (req,res)=>{
     console.log("request recieved")
 
     const {name,city}=req.body;
