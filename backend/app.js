@@ -41,7 +41,7 @@ app.post('/sendData', async (req,res)=>{
     console.log(city,name)
 })
 
-mongoose.connect('mongodb://localhost:27017/dzyrisDB')
+mongoose.connect('mongodb://localhost:27017/dzyrisDB') //we can also explicitly mention localhost as 127.0.0.1
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Could not connect to MongoDB', err));
 
